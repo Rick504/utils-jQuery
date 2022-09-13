@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src='http://momentjs.com/downloads/moment.min.js'></script>
+    <script>
+
+        // isSame: igual
+        // isAfter: depois
+        // isBefore: antes
+        // isSameOrAfter: pode usar junção, aqui é um exemplo
+        // subtract: subtrai
+        // add: adiciona
+
+        // comparar data maior que a outra
+        if ( moment(`2020-05-23`).isAfter(`2020-05-22`) ) {
+            alert('primeira data não pode ser maior que a segunda')
+        }
+
+        // comparar data igual a outra
+        if ( moment(`2020-05-25`).isSame(`2020-05-25`) ) {
+            alert('datas iguais')
+        }
+
+        //comparar pessoa com mais de 65 anos
+        if(moment().subtract(65, 'years').isSameOrAfter(`1956-10-20`)){//insercao de usuario
+            alert("O usuário possui 65 anos ou mais.")
+        }
+
+
+    </script>
+</body>
+</html>

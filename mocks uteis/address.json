@@ -1,0 +1,11 @@
+{
+    "street": "Rua tal",
+    "number": "12",
+    "district": "Bairro",
+    "city": "São Paulo",
+    "state": "São Paulo",
+    "zipCode": "069000000",
+    "additional": "complemento",
+    "block": "bloco tal",
+    "apt": "apartamento tal"
+}
