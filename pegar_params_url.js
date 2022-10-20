@@ -1,4 +1,4 @@
-let params = new URL(location.href).searchParams
-let id = params.get("id")
-
+let params = new URL(location.href)
+				.searchParams
+				.get("id")
 //  if (id !== null) { $('.MUDAR').text(id) }

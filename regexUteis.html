@@ -13,61 +13,40 @@
         <input
             name="rg_number"
             type="text"
-            onkeyup="removeInvalidChars(event ,'VALID_LETTERS_SPECIAL')">
+            onkeyup="removeInvalidChars(event ,'BLANK_SPACE')">
 
         <script>
 
         function removeInvalidChars(event, className) {
             let _v = event.target.value
+            console.log(_v)
+            console.log('rg_number::', $(`input[name="rg_number"]`).val(_v))
             switch (className) {
                 case 'BLANK_SPACE':
-                        _v = _v.replace(/[^[( )]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[( )]/gi, "")
                 case 'VALID_LETTERS':
-                        _v = _v.replace(/[^[a-z]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[a-z]/gi, "")
                 case 'VALID_LETTER_SPACE_UPPERCASE':
-                        _v = _v.replace(/[^[( )a-z]/gi, "")
+                        return _v.replace(/[^[( )a-z]/gi, "")
                         $(`input[name="${event.target.name}"]`).val(_v.toUpperCase())
-                    break;
                 case 'VALID_LETTERS_NUMBERS':
-                        _v = _v.replace(/[^[0-9a-z]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[0-9a-z]/gi, "")
                 case 'VALID_NUMBERS':
-                        _v = _v.replace(/[^[0-9]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[0-9]/gi, "")
                 case 'VALID_EMAIL':
-                        _v = _v.replace(/[^[0-9a-z-_@.]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[0-9a-z-_@.]/gi, "")
                 case 'VALID_LETTERS_NUMBERS_SPACE_SPECIALS':
-                        _v = _v.replace(/[^[( )0-9a-z)(-]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[( )0-9a-z)(-]/gi, "")
                 case 'VALID_LETTERS_SPACE_SPECIALS':
-                        _v = _v.replace(/[^[( )a-z)(-]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[( )a-z)(-]/gi, "")
                 case 'VALID_LETTERS_SPACE':
-                        _v = _v.replace(/[^[( )a-z]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[( )a-z]/gi, "")
                 case 'VALID_ADDRESS_SPECIALS':
-                        _v = _v.replace(/[^[( )(-)]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[( )(-)]/gi, "")
                 case 'BLANK_SPECIALS':
-                        _v = _v.replace(/[^[a-zÚÙÛÜÉÈÊËñçúùûüóòôõöíìîïéèêëáàâäãÑÇÓÒÔÕÖÍÌÎÏÉÈÊËÁÀÂÄÃ]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[a-zÚÙÛÜÉÈÊËñçúùûüóòôõöíìîïéèêëáàâäãÑÇÓÒÔÕÖÍÌÎÏÉÈÊËÁÀÂÄÃ]/gi, "")
                 case 'VALID_LETTERS_SPECIAL':
-                        _v = _v.replace(/[^[( )a-zÚÙÛÜÉÈÊËñçúùûüóòôõöíìîïéèêëáàâäãÑÇÓÒÔÕÖÍÌÎÏÉÈÊËÁÀÂÄÃ]/gi, "")
-                        $(`input[name="${event.target.name}"]`).val(_v)
-                    break;
+                        return _v.replace(/[^[( )a-zÚÙÛÜÉÈÊËñçúùûüóòôõöíìîïéèêëáàâäãÑÇÓÒÔÕÖÍÌÎÏÉÈÊËÁÀÂÄÃ]/gi, "")
             }
         }
     </script>
